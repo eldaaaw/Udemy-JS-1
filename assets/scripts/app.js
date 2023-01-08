@@ -62,5 +62,3 @@ subtractBtn.addEventListener('click', substract);
 multiplyBtn.addEventListener('click', multiply);
 divideBtn.addEventListener('click',  devide);
 
-
-alert(6/2(1+2))
