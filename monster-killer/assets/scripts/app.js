@@ -3,6 +3,8 @@ const   MONSTER_ATTACK_VALUE = 15 ;
 const   STRONG_ATTACK_VALUE = 18;
 const   HEAL_VALUE = 20;
 
+const moodAttack = "";
+const moodStrongAttack = "";
 const enterdValueNumber = parseInt(prompt("Enter a Value: "));
 
 let chosenMaxLife = enterdValueNumber;
