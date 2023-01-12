@@ -28,7 +28,50 @@ function reset(){
     resetGame(chosenMaxLife)
 }
 
-function writeToLog(event){
+function writeToLog(event,value, monsterHealth, playerHealth){
+    let logEntery;
+    if (ev === LOG_EVENT_PLAYER_STRONG_ATTACK){
+        logEntery = {
+            event : ev,
+            value: val,
+            target : 'Monster',
+            finalMonesterHelth : monsterHealth,
+            finalPlayerHealth : playerHealth
+        }
+        log.push(logEntery);
+    } else if(ev === LOG_EVENT_PLAYER_STRONG_ATTACK){
+        logEntery = {
+            event : ev,
+            value: val,
+            target : 'Monster',
+            finalMonesterHelth : monsterHealth,
+            finalPlayerHealth : playerHealth
+        }
+    } else if (ev === LOG_EVENT_MONSTER_ATTACK){
+        logEntery = {
+            event : ev,
+            value: val,
+            target : 'Player',
+            finalMonesterHelth : monsterHealth,
+            finalPlayerHealth : playerHealth
+        }
+    } else if (ev === LOG_EVENT_HEAL){
+        logEntery = {
+            event : ev,
+            value: val,
+            target : 'Heal',
+            finalMonesterHelth : monsterHealth,
+            finalPlayerHealth : playerHealth
+        }
+    } else if (ev === LOG_GAME_OVER){
+        logEntery = {
+            event : ev,
+            value: val,
+            finalMonesterHelth : monsterHealth,
+            finalPlayerHealth : playerHealth
+        }
+    }
+    log.push(logEntery);
 
 }
 
@@ -58,7 +101,7 @@ function endRound(){
         
         alert("Try Again");
         reset();
-    }
+    } 
 
 }
 
