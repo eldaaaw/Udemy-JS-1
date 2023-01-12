@@ -2,10 +2,17 @@ const   ATTACK_VALUE = 10;
 const   MONSTER_ATTACK_VALUE = 15 ;
 const   STRONG_ATTACK_VALUE = 18;
 const   HEAL_VALUE = 20;
+const   LOG_EVENT_PLAYER_ATTACK = 'player attack';
+const   LOG_EVENT_PLAYER_STRONG_ATTACK = 'player strong attack';
+const   LOG_EVENT_HEAL = 'heal';
+const   LOG_EVENT_MONSTER_ATTACK = 'monster attack';
+const   LOG_GAME_OVER = 'game over';
 
 const moodAttack = "";
 const moodStrongAttack = "";
 const enterdValueNumber = parseInt(prompt("Enter a Value: "));
+
+let gmaeEvent = [];
 
 let chosenMaxLife = enterdValueNumber;
 if (isNaN(chosenMaxLife) || chosenMaxLife <= 0){
@@ -19,6 +26,10 @@ function reset(){
     currentMonsterHealth = chosenMaxLife;
     currentPlayerHealth = chosenMaxLife;
     resetGame(chosenMaxLife)
+}
+
+function writeToLog(event){
+
 }
 
 adjustHealthBars(chosenMaxLife);
